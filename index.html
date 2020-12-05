@@ -173,8 +173,8 @@
       </div> 
     </div>
     <!-- end section title -->
-    <div class="row mb-5">
-      <div class="col-10 mx-auto col-md-12 d-flex justify-content-end">
+    <div class="row mb-5 align-items-baseline">
+      <div class="col-10 mx-auto col-md-12 d-flex flex-wrap justify-content-end align-items-baseline">
         <button class="btn btn-outline-secondary text-uppercase mx-1">all</button>
         <button class="btn btn-outline-secondary text-uppercase mx-1">american</button>
         <button class="btn btn-outline-secondary text-uppercase mx-1">german</button>
@@ -231,6 +231,37 @@
               </span>50
             </p>
           </div>
+          <div class="d-flex justify-content-between container-for-controls text-capitalize p-3">
+            <!-- drop down type -->
+            <div class="justify-content-center align-items-center">
+              <label for="type" class="justify-content-center align-items-center">type:</label>
+              <select name="type" class="text-muted" id="cars">
+                <option value="sport">sport</option>
+                <option value="sedan">sedan</option>
+                <option value="hatchback">hatchback</option>
+              </select>
+            </div>
+            <!-- end drop down type -->
+
+            <!-- manual/auto type -->
+            <div class="justify-content-center align-items-center">
+              <label for="shift-type" class="justify-content-center align-items-center">shift:</label>
+              <select name="shift-type" class="text-muted" id="cars">
+                <option value="auto">auto</option>
+                <option value="manual">manual</option>
+              </select>
+            </div>
+
+
+
+
+            <!-- manual/auto type -->
+
+
+
+
+          </div>
+
           <!-- end of card footer -->
         </div>
       </div>
@@ -528,8 +559,133 @@
     <!-- end cars -->
   </div>
 </section>
-
 <!-- end inventory section -->
+
+<!-- question -->
+<div class="section question py-5" id="question">
+  <div class="container">
+    <div class="row">
+      <!-- single question first -->
+      <div class="col-10 mx-auto my-2 col-md-6 d-flex justify-content-between question-grey p-4">
+        <!-- first flexbox child -->
+        <a href="#" class="question-icon mr-3">
+          <i class="fas fa-search fa-fw"></i>
+        </a>
+        <!-- second flexbox child -->
+        <div class="question-text w-75">
+          <h4 class="question-title text-capitalize font-weight-bold">
+            are you looking for a car?
+          </h4>
+          <p class="question-info">Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Voluptas, cum.
+          </p>
+        </div>
+      </div>
+
+      <!-- single question second -->
+      <div class="col-10 mx-auto my-2 col-md-6 d-flex justify-content-between question-yellow p-4">
+        <!-- first flexbox child -->
+        <a href="#" class="question-icon mr-3">
+          <i class="fas fa-dollar-sign fa-fw"></i>
+        </a>
+        <!-- second flexbox child -->
+        <div class="question-text w-75">
+          <h4 class="question-title text-capitalize font-weight-bold">
+            do you want to sell a car?
+          </h4>
+          <p class="question-info">Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Voluptas, cum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end question -->
+
+
+
+<!-- featured car -->
+<section class="featured py-5" id="featured">
+  <div class="container">
+    <!-- section title -->
+    <div class="row mb-5">
+      <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+        <h1 class="font-weight-bold align-self-center mx-1">featured</h1>
+        <h1 class="section-title--special mx-1">cars</h1>
+      </div> 
+    </div>
+    <!-- end section title -->
+    <div class="row">
+      <!-- featured info -->
+      <div class="col-10 mx-auto col-lg-6 featured-info my-3 column1">
+        <!-- single car item -->
+        <div class="featured-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+          <span class="featured-icon mr-2">
+            <i class="fas fa-car"></i>
+          </span>
+          <h5 class="font-weight-bold mx-1">mercedes</h5>
+          <h5 class="mx-1">new model</h5>
+        </div>
+        <!-- end single car item -->
+        <!-- single car item -->
+        <div class="featured-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+          <span class="featured-icon mr-2">
+            <i class="fas fa-car"></i>
+          </span>
+          <h5 class="font-weight-bold mx-1">mercedes</h5>
+          <h5 class="mx-1">new model</h5>
+        </div>
+        <!-- end single car item -->
+        <!-- single car item -->
+        <div class="featured-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+          <span class="featured-icon mr-2">
+            <i class="fas fa-car"></i>
+          </span>
+          <h5 class="font-weight-bold mx-1">mercedes</h5>
+          <h5 class="mx-1">new model</h5>
+        </div>
+        <!-- end single car item -->
+        <!-- single car item -->
+        <div class="featured-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+          <span class="featured-icon mr-2">
+            <i class="fas fa-car"></i>
+          </span>
+          <h5 class="font-weight-bold mx-1">mercedes</h5>
+          <h5 class="mx-1">new model</h5>
+        </div>
+        <!-- end single car item -->
+        <!-- single car item -->
+        <div class="featured-item my-3 d-flex p-2 text-capitalize align-items-baseline flex-wrap">
+          <span class="featured-icon mr-2">
+            <i class="fas fa-car"></i>
+          </span>
+          <h5 class="font-weight-bold mx-1">mercedes</h5>
+          <h5 class="mx-1">new model</h5>
+        </div>
+        <!-- end single car item -->
+      </div>
+
+      <!-- featured img -->
+      <div class="col-10 mx-auto col-lg-6 featured-img my-3 align-self-center column2">
+        <!-- img container -->
+        <div class="img-container">
+          <!-- the use of img-fluid will make sure that the image fits in the container -->
+          <img src="img/featured.jpeg" alt="" class="img-fluid featured-photo">
+          <a href="#" class="featured-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- end featured car -->
 
 
 
