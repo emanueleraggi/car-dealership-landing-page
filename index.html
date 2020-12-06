@@ -173,17 +173,25 @@
       </div> 
     </div>
     <!-- end section title -->
-    <div class="row mb-5 align-items-baseline">
+
+    <!-- button row -->
+    <div class="row mb-3 align-items-baseline">
       <div class="col-10 mx-auto col-md-12 d-flex flex-wrap justify-content-end align-items-baseline">
-        <button class="btn btn-outline-secondary text-uppercase mx-1">all</button>
-        <button class="btn btn-outline-secondary text-uppercase mx-1">american</button>
-        <button class="btn btn-outline-secondary text-uppercase mx-1">german</button>
-        <button class="btn btn-outline-secondary text-uppercase mx-1">automatic</button>
-        <button class="btn btn-outline-secondary text-uppercase mx-1">manual</button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="all">all</button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="american">american</button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="german">german</button>
+      </div>
+    </div>
+    <!-- end button row -->
+    <!-- button row -->
+    <div class="row mb-5 align-items-baseline">
+      <div class="col-10 mx-auto col-md-12 d-flex justify-content-end align-items-baseline">
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="automatic">automatic</button>
+        <button class="btn btn-outline-secondary text-uppercase mx-1 filter-btn" data-filter="manual">manual</button>
         &nbsp;
         &nbsp;
         &nbsp;
-          <label for="cars" class="text-muted justify-content-center align-items-center">Choose a car:</label>
+          <label for="cars" class="text-muted justify-content-center align-items-center text-capitalize">brand:</label>
           <select name="cars" class="text-muted" id="cars">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
@@ -192,8 +200,10 @@
           </select>
       </div>
     </div>
+    <!-- end button row -->
+
     <!-- cars -->
-    <div class="row">
+    <div class="row inventory-container">
       <!-- single car -->
       <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 col-xl-3">
         <div class="card car-card">
@@ -231,37 +241,28 @@
               </span>50
             </p>
           </div>
-          <div class="d-flex justify-content-between container-for-controls text-capitalize p-3">
+          <div class="d-flex justify-content-between align-items-center container-for-controls text-capitalize p-2">
             <!-- drop down type -->
             <div class="justify-content-center align-items-center">
-              <label for="type" class="justify-content-center align-items-center">type:</label>
-              <select name="type" class="text-muted" id="cars">
-                <option value="sport">sport</option>
-                <option value="sedan">sedan</option>
-                <option value="hatchback">hatchback</option>
+              <label for="type" class="justify-content-center align-items-center text-uppercase font-weight-bold">type:</label>
+              <select name="type" class="text-muted cbox" id="cars">
+                <option class="all--options" value="sport">sport</option>
+                <option class="all--options" value="sedan">sedan</option>
+                <option class="all--options" value="hatchback">hatchback</option>
               </select>
             </div>
             <!-- end drop down type -->
 
             <!-- manual/auto type -->
             <div class="justify-content-center align-items-center">
-              <label for="shift-type" class="justify-content-center align-items-center">shift:</label>
-              <select name="shift-type" class="text-muted" id="cars">
+              <label for="shift-type" class="justify-content-center align-items-center text-uppercase font-weight-bold">shift:</label>
+              <select name="shift-type" class="text-muted cbox" id="cars">
                 <option value="auto">auto</option>
                 <option value="manual">manual</option>
               </select>
             </div>
-
-
-
-
-            <!-- manual/auto type -->
-
-
-
-
+            <!-- end manual/auto type -->
           </div>
-
           <!-- end of card footer -->
         </div>
       </div>
@@ -553,6 +554,170 @@
         </div>
       </div>
       <!-- end single car -->
+      <!-- single car -->
+      <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 col-xl-3">
+        <div class="card car-card">
+          <img src="img/car-american-5.jpeg" class="card-img-top car-img" alt="">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="car-info d-flex justify-content-between">
+              <!-- first flex child -->
+              <div class="car-text text-uppercase">
+                <h6 class="font-weight-bold">car maker</h6>
+                <h6>model</h6>
+              </div>
+              <!-- second flex child -->
+              <h5 class="car-value align-self-center py-2 px-3">$
+                <span class="car-price">10,000</span>
+              </h5>
+            </div>
+          </div>
+          <!-- end card body -->
+          <!-- card footer -->
+          <div class="card-footer text-capitalize d-flex justify-content-between">
+            <p>
+              <span>
+                <i class="fas fa-car"></i>
+              </span>sedan
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-cogs"></i>
+              </span>manual
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-gas-pump"></i>
+              </span>50
+            </p>
+          </div>
+          <!-- end of card footer -->
+        </div>
+      </div>
+      <!-- end single car -->
+      <!-- single car -->
+      <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 col-xl-3">
+        <div class="card car-card">
+          <img src="img/car-german-5.jpeg" class="card-img-top car-img" alt="">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="car-info d-flex justify-content-between">
+              <!-- first flex child -->
+              <div class="car-text text-uppercase">
+                <h6 class="font-weight-bold">car maker</h6>
+                <h6>model</h6>
+              </div>
+              <!-- second flex child -->
+              <h5 class="car-value align-self-center py-2 px-3">$
+                <span class="car-price">10,000</span>
+              </h5>
+            </div>
+          </div>
+          <!-- end card body -->
+          <!-- card footer -->
+          <div class="card-footer text-capitalize d-flex justify-content-between">
+            <p>
+              <span>
+                <i class="fas fa-car"></i>
+              </span>sedan
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-cogs"></i>
+              </span>manual
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-gas-pump"></i>
+              </span>50
+            </p>
+          </div>
+          <!-- end of card footer -->
+        </div>
+      </div>
+      <!-- end single car -->
+      <!-- single car -->
+      <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 col-xl-3">
+        <div class="card car-card">
+          <img src="img/car-american-5.jpeg" class="card-img-top car-img" alt="">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="car-info d-flex justify-content-between">
+              <!-- first flex child -->
+              <div class="car-text text-uppercase">
+                <h6 class="font-weight-bold">car maker</h6>
+                <h6>model</h6>
+              </div>
+              <!-- second flex child -->
+              <h5 class="car-value align-self-center py-2 px-3">$
+                <span class="car-price">10,000</span>
+              </h5>
+            </div>
+          </div>
+          <!-- end card body -->
+          <!-- card footer -->
+          <div class="card-footer text-capitalize d-flex justify-content-between">
+            <p>
+              <span>
+                <i class="fas fa-car"></i>
+              </span>sedan
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-cogs"></i>
+              </span>manual
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-gas-pump"></i>
+              </span>50
+            </p>
+          </div>
+          <!-- end of card footer -->
+        </div>
+      </div>
+      <!-- end single car -->
+      <!-- single car -->
+      <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 col-xl-3">
+        <div class="card car-card">
+          <img src="img/car-german-5.jpeg" class="card-img-top car-img" alt="">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="car-info d-flex justify-content-between">
+              <!-- first flex child -->
+              <div class="car-text text-uppercase">
+                <h6 class="font-weight-bold">car maker</h6>
+                <h6>model</h6>
+              </div>
+              <!-- second flex child -->
+              <h5 class="car-value align-self-center py-2 px-3">$
+                <span class="car-price">10,000</span>
+              </h5>
+            </div>
+          </div>
+          <!-- end card body -->
+          <!-- card footer -->
+          <div class="card-footer text-capitalize d-flex justify-content-between">
+            <p>
+              <span>
+                <i class="fas fa-car"></i>
+              </span>sedan
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-cogs"></i>
+              </span>manual
+            </p>
+            <p>
+              <span>
+                <i class="fas fa-gas-pump"></i>
+              </span>50
+            </p>
+          </div>
+          <!-- end of card footer -->
+        </div>
+      </div>
+      <!-- end single car -->
 
     </div>
 
@@ -678,14 +843,64 @@
           </a>
         </div>
       </div>
-
-
-
     </div>
   </div>
 </section>
-
 <!-- end featured car -->
+
+<!-- gallery -->
+
+
+<!-- end gallery -->
+
+
+<!-- contact  -->
+
+
+<!-- end contact -->
+
+
+<!-- services -->
+
+
+
+<!-- end services -->
+
+
+<!-- what they say -->
+
+
+
+<!-- end what they say -->
+
+
+
+
+
+
+
+<!-- footer -->
+<footer class="footer py-5">
+  <div class="footer-icons d-flex justify-content-around">
+    <a href="#" class="footer-icon">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-google-plus"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- end footer -->
 
 
 

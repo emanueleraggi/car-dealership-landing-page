@@ -181,13 +181,30 @@ body{
 }
 
 
-.row {
+/* .row {
   border: 0.5rem dotted green !important;
-}
+} */
 
 /* inventory */
 .inventory {
   background: var(--mainGrey);
+}
+
+.inventory-container {
+  border: 0.5rem dotted brown !important;
+}
+
+.cbox {
+  text-transform: capitalize;
+  color: var(--mainBlack) !important;
+  background: var(--mainGrey);
+  border: 0.15rem solid var(--mainBlue);
+  border-radius: 0.4rem;
+}
+
+.all--options {
+  text-transform: capitalize;
+  color: var(--mainYellow);
 }
 
 .car-card {
@@ -296,8 +313,23 @@ body{
 .featured-link {
   /* as we put the absolute position, the icon is gone */
   position: absolute;
+  top: 50% ;
+  left: 50%;
+  font-size: 3rem;
+  transform: translateX(-50%, -50%);
+  color: var(--mainBlack);
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
+.featured-link:hover {
+  color: var(--mainWhite);
+}
+
+/* now, as we are hovering on the container, something should also happen to the links */
+.img-container:hover .featured-link {
+  opacity: 1;
+} 
 
 
 .column1 {
@@ -306,4 +338,21 @@ body{
 
 .column2 {
   border: 0.25rem solid orange;
+}
+
+/* footer */
+
+.footer {
+  background: var(--mainBlack);
+}
+
+.footer-icon {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--mainYellow);
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-icon:hover {
+  color: var(--mainBlue);
 }
