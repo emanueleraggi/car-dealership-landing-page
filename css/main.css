@@ -15,94 +15,70 @@ body{
   color: var(--mainBlack);
   background: var(--mainWhite);
 }
-/* REM values to target root element 1REM = 16px */
-
-
 /* section title */
-.section-title--special {
+.section-title--special{
   background: var(--transparentBlue);
   color: var(--mainWhite);
   padding: 0.5rem 2rem;
-  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
 }
-
-
 /* preloader */
-.preloader {
-  /* after we fix the position we won't be able to see it */
-  position: fixed; 
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.preloader{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
   background: var(--mainWhite);
   z-index: 999;
 }
-
-.hidePreloader {
-  display: none !important;
+.hidePreloader{
+  display: none!important;
 }
+
+
+
+
+
 
 /* navbar */
-
-.navbar {
+.navbar{
   background: var(--mainWhite);
 }
-
-.navbar-icon {
+.navbar-icon{
   font-size: 2rem;
   color: var(--mainBlue);
 }
-
-.navbar-toggler {
-  outline-color: var(--mainBlue) !important;
-  /* border: 0.2rem solid var(--mainBlue); */
+.navbar-toggler{
+  outline-color: var(--mainBlue)!important;
 }
-
-.nav-link {
+.nav-link{
   color: var(--mainBlack);
   text-transform: capitalize;
 }
-
-.nav-link:hover {
+.nav-link:hover{
   color: var(--mainBlue);
 }
-
-
-.nav-icon {
+.nav-icon{
   font-size: 1.5rem;
   color: var(--mainBlue);
-  text-decoration: none !important;
-  transition: all 0.5s ease-in-out;
+  text-decoration: none!important;
+  transition-property: color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
 }
-
-.nav-icon:hover {
+.nav-icon:hover{
   color: var(--mainBlack);
 }
-
 /* header */
-.header {
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95% );
-  color: var(--mainWhite);
-  /* this is because the image is moving and not the header */
-  overflow: hidden; 
+.header{
+  clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+  color:var(--mainWhite);
+  overflow: hidden;
 }
-
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2) translateX(-5%);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.height-max {
+.height-max{
   min-height: calc(100vh - 76px);
-  background: url('../img/headerBcg.jpeg');
+  background:url('../img/headerBcg.jpeg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -112,247 +88,283 @@ body{
   animation-delay: 5s;
   animation-iteration-count: infinite;
 }
-
-
-.skills {
-  border: 0.5rem dotted red;
-  /* background: var(--mainGrey); */
-}
-
-.container {
-  border: 0.5rem dotted var(--mainYellow);
-}
-
-.container-for-controls {
-  border: 0.2rem dotted green;
-}
-
-.select { 
-  /* Whatever color  you want */
-  background-color: var(--mainYellow) !important;
-}
-
-
-.title-heading {
-  background: rgba(0, 0, 0, 0.4);
-  border-left: 0.3rem solid var(--mainBlue);
-}
-
-.title {
-  font-weight: 700;
-  font-size: 1.9rem;
-}
-
-@media screen and (min-width:768px) {
-  .title {
-    font-size: 3rem;
+@keyframes zoom{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2) translateX(-5%)
+  }
+  100%{
+    transform: scale(1)
   }
 }
 
 
-.title-icon {
-  color: var(--mainBlue);
-  text-decoration: none;
-}
 
-.title-icon:hover {
+
+
+.title-heading{
+  background: rgba(0,0,0,0.4);
+  border-left: 0.3rem solid var(--mainBlue);
+}
+.title{
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+@media screen and (min-width:768px){
+  .title{
+    font-size: 3rem;
+  }
+}
+.title-icon{
+  color: var(--mainBlue);
+  text-decoration: none!important;
+}
+.title-icon:hover{
   color: var(--mainBlue);
   opacity: 0.6;
 }
-
-
 /* skills */
-.skills-icon {
+.skills-icon{
   font-size: 3rem;
   color: var(--mainYellow);
   background: var(--mainGrey);
 }
-
-
-.skills-icon:hover {
+.skills-icon:hover{
   color: var(--mainYellow);
 }
-
-.skills-underline {
+.skills-underline{
   width: 4rem;
   height: 0.3rem;
   background: var(--mainBlue);
   margin: 1rem auto;
 }
-
-
-/* .row {
-  border: 0.5rem dotted green !important;
-} */
-
 /* inventory */
-.inventory {
+.inventory{
   background: var(--mainGrey);
 }
-
-.inventory-container {
-  border: 0.5rem dotted brown !important;
+.car-card{
+  border-radius: 0!important;
 }
-
-.cbox {
-  text-transform: capitalize;
-  color: var(--mainBlack) !important;
-  background: var(--mainGrey);
-  border: 0.15rem solid var(--mainBlue);
-  border-radius: 0.4rem;
+.car-img{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
-
-.all--options {
-  text-transform: capitalize;
-  color: var(--mainYellow);
-}
-
-.car-card {
-  border-radius: 2rem !important;
-  border-bottom: 0.2rem solid var(--mainYellow);
-  border-right: 0.2rem solid var(--mainYellow);
-  border-left: 0.2rem solid var(--mainYellow);
-
-}
-
-.car-img {
-  border-top-left-radius: 2rem !important;
-  border-top-right-radius: 2rem !important;
-  border-top: 0.2rem solid var(--mainYellow);
-}
-
-.car-value {
+.car-value{
   background: var(--mainBlue);
   color: var(--mainWhite);
-  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
+  clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
+  transition: all 1s linear;
 }
-
-
-.car-value:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-/* end inventory */
-
-
+.car-value:hover{
+  clip-path: polygon(0% 0,100% 0,100% 100%,0 100%);
+}  
 /* question */
-.question {
+.question{
   background: url('../img/questionBcg.jpeg')center/cover fixed no-repeat;
 }
-
-.question-grey {
-  background: rgba(79, 109, 122, 0.75);
+.question-grey{
+  background: rgba(79,109,122,0.75);
 }
-
-.question-yellow {
-  background: rgba(227, 181, 5, 0.75);
+.question-yellow{
+  background: rgba(227,181,5,0.75);
 }
-
-.question-icon {
+.question-icon{
   font-size: 4rem;
   color: var(--mainBlue);
   transition: all 0.5s ease-in-out;
 }
-
-.question-icon:hover {
-  transform: translateY(-10%);
-  color: var(--mainBlue);
+.question-icon:hover{
+transform: translateY(-10%);
+color: var(--mainBlue);
 }
-
-.question-info {
-  color: var(--mainWhite);
+.question-info{
+  color:var(--mainWhite);
 }
-
-/* featured cars */
-
-.featured {
+/* featured */
+.featured{
   background: var(--mainGrey);
 }
-
-.featured-item {
+.featured-item{
   background: var(--mainWhite);
   border-radius: 0.5rem;
   opacity: 0.5;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
-
-.featured-item:hover {
+.featured-item:hover{
   opacity: 1;
   transform: scale(1.05);
 }
-
-.featured-icon {
+.featured-icon{
   font-size: 1.5rem;
   color: var(--mainYellow);
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
-
-.featured-icon:hover {
+.featured-icon:hover{
   color: var(--mainBlue);
-  transform: scale(1.1);
 }
-
-.img-container {
+.img-container{
   background: var(--mainBlue);
   position: relative;
   overflow: hidden;
 }
-
-.featured-photo {
+.featured-photo{
   transition: all 1s ease-in-out;
 }
-
-.img-container:hover .featured-photo {
-  transform: scale(1.3);
-  opacity: 0.5;
+.img-container:hover .featured-photo{
+ transform: scale(1.3);
+ opacity: 0.5;
 }
-
-.featured-link {
-  /* as we put the absolute position, the icon is gone */
+.featured-link{
   position: absolute;
-  top: 50% ;
+  top: 50%;
   left: 50%;
   font-size: 3rem;
-  transform: translateX(-50%, -50%);
+  transform: translate(-50%,-50%);
   color: var(--mainBlack);
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition:all 1s ease-in-out;
 }
-
-.featured-link:hover {
+.featured-link:hover{
   color: var(--mainWhite);
 }
 
-/* now, as we are hovering on the container, something should also happen to the links */
-.img-container:hover .featured-link {
+.img-container:hover .featured-link{
   opacity: 1;
-} 
-
-
-.column1 {
-  border: 0.25rem solid red !important;
 }
-
-.column2 {
-  border: 0.25rem solid orange;
+/* gallery  */
+.gallery-item{
+  background: var(--mainYellow);
+  position: relative;
+  cursor: pointer;
 }
+.gallery-img{
+  transition: all 1s ease-in-out;
+}
+.gallery-item:hover .gallery-img{
+opacity: 0.5;
+}
+.gallery-item::after{
+  content: "";
+  position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ outline: 0.5rem solid var(--mainWhite);
+ outline-offset: -2rem;
+ transition: all 1s ease-in-out;
+ transform: scale(0);
+}
+.gallery-item:hover:after{
+  transform: scale(1);
+}
+/* contact section */
+.contact{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/headerBcg.jpeg')center/cover fixed no-repeat;
+}
+.contact-input{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: var(--mainYellow);
+  color: var(--mainYellow)!important;
+}
+.contact-input::placeholder{
+  color: var(--mainYellow);
+}
+.contact-input:focus{
+  background: transparent;
+  border-color: var(--mainYellow);
+}
+.contact-btn{
+  text-transform: uppercase;
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+.contact-btn:hover{
+  background: var(--mainYellow);
+  color: var(--mainBlack);
+}
+/* services section */
 
-/* footer */
-
-.footer {
+.services{
+  position: relative;
+  min-height: 85vh;
+  max-width: 95vw;
+  margin: 0 auto;
+  clip-path: polygon(0 10%,100% 0,100% 90%, 0 100%);
+  
+}
+.video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+.video-item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--transparentBlue);
+  z-index: -2;
+}
+.service{
   background: var(--mainBlack);
+  color: var(--mainWhite);
+  transition: all 1s ease-in-out;
 }
-
-.footer-icon {
-  font-size: 1.8rem;
+.service:hover{
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  padding-left: 2.2rem!important
+}
+.service-icon{
+  font-size: 4rem;
+  color: var(--mainYellow);
+}
+/* customer */
+.customer-card-body{
+  margin-top: -4rem!important;
+  color: var(--mainGrey);
+}
+.customer-img{
+  border:0.4rem solid var(--mainWhite);
+}
+.customer-name{
+  color: var(--mainBlue);
+  margin: 0.5rem;
+}
+.customer-icon{
+  font-size: 2rem;
+  color: var(--mainGrey);
+}
+.customer-quote{
+  max-width: 90%;
+}
+/* footer icons */
+.footer{
+background: var(--mainBlack);
+}
+.footer-icon{
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--mainYellow);
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
-
-.footer-icon:hover {
+.footer-icon:hover{
   color: var(--mainBlue);
 }
+
